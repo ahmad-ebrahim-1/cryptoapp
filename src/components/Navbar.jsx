@@ -35,14 +35,15 @@ const Navbar = () => {
 
   return (
     <div className="nav-container">
-      <div
-        className="logo-container"
-        onClick={() => {
-          window.scrollTo({ top: 0, behavior: "smooth" });
-        }}
-      >
+      <div className="logo-container">
         <Avatar src={icon} size="large" />
-        <Typography.Title level={2} className="logo">
+        <Typography.Title
+          level={2}
+          className="logo"
+          onClick={() => {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          }}
+        >
           <Link>Cryptoverse</Link>
         </Typography.Title>
         <Button
